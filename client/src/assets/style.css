@@ -110,6 +110,12 @@ body.loading { overflow: hidden; }
   display: flex; align-items: center; justify-content: space-between;
 }
 
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .nav-logo img { height: 100px; width: auto; display: block; }
 
 .nav-links { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
@@ -168,6 +174,7 @@ body.loading { overflow: hidden; }
   position: relative; min-height: 100vh;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
+  padding-bottom: 9rem;
   overflow: hidden;
 }
 
@@ -195,6 +202,7 @@ body.loading { overflow: hidden; }
 .hero-content {
   position: relative; z-index: 2;
   text-align: center; padding: 8rem 2rem 4rem;
+  width: 100%;
   max-width: 900px;
 }
 
@@ -278,6 +286,7 @@ body.loading { overflow: hidden; }
   position: absolute; bottom: 6rem; left: 0; right: 0;
   display: flex; justify-content: center; align-items: center;
   gap: 0; z-index: 2;
+  padding: 0 1rem;
   opacity: 0; animation: fadeIn 1s 1.6s ease forwards;
 }
 .hstat { text-align: center; padding: 0 3rem; }
@@ -580,6 +589,7 @@ body.loading { overflow: hidden; }
 @media(max-width:900px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } }
 
 .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+.contact-logo { display: flex; align-items: center; }
 .contact-logo img { height: 140px; width: auto; }
 
 .cinfo-item { display: flex; flex-direction: column; gap: 0.3rem; }
@@ -972,6 +982,10 @@ body.loading { overflow: hidden; }
 .prop-ctas {
   display: flex; gap: 1rem; flex-wrap: wrap;
 }
+.prop-ctas .btn-gold,
+.prop-ctas .btn-outline-dark {
+  justify-content: center;
+}
 .btn-outline-dark {
   display: inline-flex; align-items: center;
   padding: 0.9rem 1.8rem;
@@ -1171,6 +1185,19 @@ body.loading { overflow: hidden; }
   .footer-inner { gap: 2.5rem; }
   .map-header { padding: 2rem 1.5rem 1.5rem; }
   .map-actions { padding: 1.5rem; }
+  .section-tag,
+  .section-title,
+  .section-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .map-actions { justify-content: center; }
+  .footer-bottom .container {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
 }
 
 @media(max-width:480px) {
@@ -1178,6 +1205,29 @@ body.loading { overflow: hidden; }
   .hero-btns { flex-direction: column; align-items: center; }
   .hero-logo { height: 160px; }
   .testi-card { padding: 2.5rem 1.5rem; }
+  .whatsapp-btn {
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .prop-features-grid { grid-template-columns: 1fr; }
+  .prop-ctas .btn-gold,
+  .prop-ctas .btn-outline-dark {
+    width: 100%;
+  }
+}
+
+@media(max-width:900px) {
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+  .contact-logo {
+    justify-content: center;
+  }
+  .whatsapp-contact {
+    width: min(100%, 320px);
+    justify-content: center;
+  }
 }
 
 .reveal {
